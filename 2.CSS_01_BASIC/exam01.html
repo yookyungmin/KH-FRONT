@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <STYLE>
+        /* 태그 선택자*/
+          /* div{
+            border:1PX solid black;
+            background-color: dodgerblue;
+        }*/
+
+        /*클래스 선택자*/
+       /* .diva{
+            background-color: bisque;
+        }
+        .divb{
+            background-color:brown;
+        } */
+    /*ID 선택자*/
+        #idc{
+            border: 1px solid orange;
+        }
+        div{
+            color:red;
+        }
+        div{
+            color:blue; 
+        } 
+        *{
+           color: pink;
+        }
+        
+    </STYLE>
+</head>
+<body>
+    <!--
+        CSS (Cascade Style Sheet)
+        External Style Sheet
+-실습땐 사용할일이 적다가 프로젝트 때 자주 사용 예정, css 코드만 따로 파일 만들어서 관리
+Internal Sryle Sheet
+-head 영역에 <style> </style> 을 만들어 사용하는 방법
+Inline Style Sheet
+- html코드 안에 직접 사용 <table style=""> </table> -가독성이 떨어짐 간단한거 한두개
+      
+*선택자
+ID 선택자 # 사용 
+클래스 선택자 . 사용
+클래스 선택자가 태그 선택자보다 우선 순위가 높다
+id선택자>클래스선택자>태그선택자 우선순위
+태그 선택자
+전체선택자 *{} 우선순위 매우낮다
+-->
+    <div class = "diva" id="ida" style=""
+    
+    <div class="diva" id="ida">
+        A
+    </div>
+    <div class="divb"> 
+        B
+    </div>
+    <div id="idc">C </div> <!--id 값 절대 겹치게 하지 않기-->
+    <input type="button">
+</body>
+</html>

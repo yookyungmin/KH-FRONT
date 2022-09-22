@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /*반응 선택자 hover 제일많이쓰는(마우스 커서 올렸을때바뀜)*/
+        /* active 마우스 클릭 하는 동안에 반응*/
+
+       /*   p:hover{
+           
+            background-color: dodgerblue;
+            cursor:pointer;
+        }
+
+    
+        p:active{
+            color: white;
+        }  */
+        
+
+        /*구조 선택자*/
+        /*div바로 밑에 있는 p태그중에 첫번쨰 , 마지막 */
+        /* div>p:first-child{
+            color: red;
+        }
+
+        div>p:last-child{
+            color:blue;
+        } */
+
+        /*div 밑에 p태그의 몇번째 글자 선택*/
+        /*2n 짝수번쨰  2n-1 홀수번쨰 odd 홀수번쨰 even 짝수번쨰*/
+        /* div>p:nth-child(2n){
+            color:green;
+        } */
+
+
+        /*div직계자손중에 p태그이면서 동시에 4번쨰인것, */
+        div>p:nth-child(4){
+            color: blue;
+        }
+
+        /*div 직계자손 중 p태그 중에서 4번쨰인것 */
+        div>p:nth-of-type(4){
+            color : forestgreen;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- div>p{$ 테스트 텍스트 입니다.}*5 -->
+    <!-- <div>
+        <p>1 테스트 텍스트 입니다.</p>
+        <p>2 테스트 텍스트 입니다.</p>
+        <p>3 테스트 텍스트 입니다.</p>
+        <p>4 테스트 텍스트 입니다.</p>
+        <p>5 테스트 텍스트 입니다.</p>
+    </div> -->
+    
+    <!--(p{$ 테스트 입니다.}+div{$ 테스트입니다})*5-->
+    <div>
+        <p>1 테스트 입니다.</p>
+        <div>1 테스트입니다</div>
+        <p>2 테스트 입니다.</p>
+        <div>2 테스트입니다</div>
+        <p>3 테스트 입니다.</p>
+        <div>3 테스트입니다</div>
+        <p>4 테스트 입니다.</p>
+        <div>4 테스트입니다</div>
+        <p>5 테스트 입니다.</p>
+        <div>5 테스트입니다</div>
+
+    </div>
+</body>
+</html>

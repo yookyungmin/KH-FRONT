@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          
+        /*자손 선택자*/ /*직계자손만 해당 바로 밑에 있는*/
+       /* div>h4{
+            background-color: chartreuse;
+        }*/ 
+        /*후손선택자 밑에 있는 모든것 */
+      /* div h4{
+            background-color: blue;
+        } */
+        
+          /* li밑에 h4만 div  div li h4  , li>h4  ,  ul>li>h4 ul h4*/
+         /* div li h4{  
+         background-color: red;
+        }  */ 
+        
+        /*동위 선택자  p태그를 먼저 찾고 바로 뒤에 오는 h4를 찾는 선택자*/
+       /*   p+h4{
+            color:chartreuse
+        }
+        */
+
+        /* p를 기준 뒤쪽에 있는 li는 모두 선택, 동위 선택자 기준점으로 뒤로만 찾을수 있다*/
+       /* p~li {
+            background-color:  pink;
+        }  */
+
+        /* h4 태그들 중에서 클래스이름이 title*/
+        h4.title{
+            color:red
+        }
+
+        /*h4 태그들 중에서 클래스가 title의 직계자손 id가 abc의 모든 후손 span*/
+        h4.title>#abc span{  
+            color:red
+        }
+    </style>
+</head>
+<body>
+
+        <h4 class="title">자/후손 선택자 연습</h4>
+        <div class ="title">방해꾼</div>
+    <Div>
+        <h4>
+            자손1 입니다
+        </h4>
+        <h4> 자손2 입니다</h4>
+        <ul> <!--unordered-->
+                <li>
+                    <h4>후손목록</h4>
+                </li>
+            <p>제목</p>
+            <li>후손1</li>
+            <li>후손2</li>
+        </ul>
+    </Div>
+    <h4> 여기는 다른 family입니다</h4>
+</body>
+</html>

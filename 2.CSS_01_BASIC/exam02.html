@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*속성선택자*/
+       /* p[name=pname],[name]{
+            background-color: pink;
+        } */
+        p[class = "pclass"], [name]{
+            background-color: pink;
+        }
+         p[class$="abc"]{   /*abc로 끝나는것을*/
+            background-color: brown;
+        }
+        p[class^= "pcl"]{    /*pcl로 시작하는것을 */
+            background-color: red;
+        }  /**/
+       
+        p[class*= "lab"]{   /*포함하면*/
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <p name="pname">Text1 문자열 입니다</p>
+    <p id = "pid">Test2 문자열 입니다</p>
+    <p class = "pclass">Test3 문자열입니다</p>
+    <p class ="pclaabc">Test4 문자열 입니다</p>
+    <p class = "labpcc"> test5 문자열</p>
+
+    <!-- ^ 속성에 대한 startwith
+        $ 속성에 대한 endwith
+        *포함하면-->
+    
+</body>
+</html>
