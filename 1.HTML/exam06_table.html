@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--emmet = 자동완성 vscode 지원   --> <!-- table>(tr>td*2)*2-->
+    <!-- 테이블 태그의 셀병합 :왼쪽->오른쪽(열병합, colspan), 위-> 아래로(rowspan 행병합) -->
+    <table border="1">
+        <tr>
+            <td colspan="2">A</td> <!--열방향 병합--> <!--두칸을 한칸처럼--> <!--B랑 병합-->
+            <!--<td>B</td>-->
+        </tr>
+        <tr>
+            <td>C</td>
+            <td rowspan="2">D</td>
+        </tr>
+        <tr>
+            <td>
+                E
+            </td>
+           <!-- <td>F</td>--> <!--F랑 병합-->
+        </tr>
+        </tr>
+    </table>
+</body> 
+
+<body>
+    <table border="1">
+        <tr>
+            <td >A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>
+                E
+            </td>
+         <td>F</td>
+          
+        </tr>
+        </tr>
+    </table>
+</body>
+</html>
