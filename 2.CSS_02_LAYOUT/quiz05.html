@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        div{
+            border:1px solid black;
+        }
+
+
+        .container{
+            position: relative;
+            width: 800px;
+            height: 800px;
+            margin:auto;
+        }
+
+        .container> div{
+            width: 350px;
+            height: 250px;
+        }
+
+        .a{
+            position : absolute;
+            left: 100px;
+            top : 150px
+           
+        }
+
+        .pic{
+            padding: 10px;
+        }
+
+        .pic>img{
+        
+            width: 100%;
+            height: 100%;
+
+        }
+     
+
+        
+        .container>div{
+              transition-duration: 2s;
+        
+        }
+        
+        /* .container div:hover{
+            z-index: 5;
+            transform: scale(1.2);
+            transform: rotate(10deg);
+            
+        } */
+
+ 
+
+
+        .b{
+              position : absolute;
+            left: 300px;
+            top : 110px;
+            z-index: 6;
+            
+        }
+
+        .c{
+            position : absolute;
+            left: 200px;
+            top : 250px;
+        }
+        .calandar{
+            width: 100%;
+            height: 10%;
+            background-color: #9c9494;
+          
+        }
+
+        .pic{
+            width: 100%;
+            height: 100%;
+            
+        }
+         .container>.a:hover{
+            z-index: 5;
+            transform: scale(1.2);
+            transform: rotate(10deg);
+            transform: scale(1.5);
+        }
+
+        .container>.b:hover{
+          z-index: 5;
+            transform: scale(1.2);
+            transform: rotate(10deg);
+        }
+
+        .container>.c:hover{
+             z-index: 11;
+            transform: scale(1.2);
+            transform: rotate(10deg);
+        }
+    
+        
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <div class="a">
+           
+            <div class="pic"><img src="fund.png" width="300px" height="200px"></div>
+            <div class="calandar"> 2021.10.28</div>
+         
+        </div>
+
+        <div class="b">
+            <div class="pic"><img src="graph.png" width="300px" height="200px"></div>
+            <div class="calandar">2019.10.30</div>
+        
+        </div>
+      
+    <div class="c">
+      
+        <div class="pic"><img src="event.png" width="300px" height="200px"></div>
+        <div class="calandar">2020.150.28</div>
+       
+    </div>
+     
+    </div>
+
+</body>
+</html>

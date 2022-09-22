@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            border: 1px solid black;
+        }
+
+        .container {
+            width: 800px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .header {
+            height: 100px;
+        }
+
+        .contents {
+            height: 400px;
+        }
+
+        .footer {
+            height: 80px;
+        }
+
+        .header>div {
+            float: left;
+            height: 100%;
+
+        }
+
+        .header>.logo {
+            width: 20%;
+        }
+
+        .header>.title {
+            width: 60%;
+        }
+
+        .header>.title>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .header>.reserved {
+            width: 20%;
+        }
+
+        .header>.reserved>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .navi {
+            height: 30px;
+        }
+
+        .contents>div {
+            height: 100%;
+            float: left;
+        }
+
+        .contents>.main {
+            width: 70%;
+        }
+
+        .contents>.My {
+            width: 30%;
+        }
+
+        /*     메인 사진 4개*/
+        .contents>.main>.main2 {
+            height: 100%;
+        }
+
+        .contents>.main>.main2>.up {
+            height: 50%;
+        }
+
+        .contents>.main>.main2>.down {
+            height: 50%;
+        }
+
+        .main2>.up>div {
+            float: left;
+            width: 50%;
+            height: 80%;
+            text-align: center;
+
+        }
+
+        .main2>.down>div {
+            float: left;
+            width: 50%;
+            height: 80%;
+            text-align: center;
+        }
+
+
+        .leftup>img:hover {
+            cursor: pointer;
+
+        }
+
+        .rightup>img:hover {
+
+            cursor: pointer;
+
+        }
+
+        .leftdw>img:hover {
+            cursor: pointer;
+
+        }
+
+        .rightdw>img:hover {
+            cursor: pointer;
+
+        }
+
+        .login {
+            height: 40%;
+        }
+
+        .email {
+            height: 60%;
+        }
+
+
+        /*네비게이터 안에 글씨*/
+        div>ul {
+            border: 1px solid red;
+            overflow: hidden;
+            padding: 0px;
+            margin: 0px;
+            height: 100%;
+        }
+
+        ul>li {
+            float: left;
+            list-style-type: none;
+            margin: 0px;
+
+            /*25% 와 100%는 부모 ul태그가 block으로 한라인 독점하는
+      성질이 있어서 그 라인을 기준*/
+            width: 25%;
+            height: 100%;
+            text-align: center;
+
+            line-height: 30px;
+
+            background-color: burlywood;
+        }
+
+        ul>li:hover {
+            cursor: pointer;
+            background-color: aquamarine;
+            color: red;
+        }
+
+
+        /*로그인 박스*/
+
+        .contain {
+            width: 400px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .head {
+            height: 30px;
+            text-align: center;
+        }
+
+        .content {
+            height: 100px;
+        }
+
+        .foot {
+            float: right;
+            height: 30px;
+            width: 100%;
+        }
+
+
+        .content>div {
+            float: left;
+        }
+
+        .content>.left {
+            width: 60%;
+            height: 100%;
+        }
+        .content>.left>div{
+              height: 50%;
+        }
+
+        .content>.left input{
+            height: 100%;
+            width: 100%;
+        }
+
+        .con>.foot>a{
+            float: right;
+        }
+
+        .right {
+            float: left;
+            width: 40%;
+            height: 100%;
+
+            padding: 15px;
+            border: 3px solid blue;
+
+            text-align: center;
+            line-height: 50px;
+
+        }
+
+        /* .right>button{
+       
+        width: 140%;
+        height: 80%;
+       
+        
+    } */
+
+
+        /*메일박스*/
+        .email>.mboxh {
+
+            height: 10%;
+            text-align: center;
+        }
+
+        .email>.mboxc {
+
+            height: 90%;
+            margin: auto;
+            overflow-y: auto;
+            text-align: center;
+        }
+
+        .email>.mboxc>.item {
+            height: 30%;
+
+        }
+        
+        .footer{
+            
+            text-align: center;
+            line-height: 70px;
+        }
+        /* input {
+        width:auto;
+        height:auto;
+        font-size:15px;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <div class="logo"> <img src="logo.png"></div>
+            <div class="title"><img src="title.png" sizes="50px"> </div>
+            <div class="reserved"><img src="global.png"></div>
+        </div>
+
+        <div class="navi">
+
+            <ul>
+                <li>Home</li>
+                <li>About me</li>
+                <li>PortFolio</li>
+                <li>contact</li>
+            </ul>
+        </div>
+
+        <div class="contents">
+            <div class="main">
+                <div class="main2">
+
+                    <div class="up">
+
+                        <div class="leftup">
+                            <img src="Notice.png" width="250px" height="150px"><Br> notice
+                        </div>
+                        <div class="rightup"><img src="graph.png" width="250px" height="150px"><br>Performance</div>
+
+                    </div>
+
+                    <div class="down">
+
+                        <div class="leftdw"><img src="fund.png" width="250px" height="150px"><br>investment</div>
+                        <div class="rightdw"><img src="event.png" width="250px" height="150px"><br>event</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="My">
+
+                <div class="login">
+
+
+                    <div class="con">
+                        <div class="head">
+                            Login Box
+                        </div>
+                        <div class="content">
+
+                            <div class="left">
+                                <div class="log">
+                                    <input  type="text" placeholder="ID를 입력하세요">
+                                </div>
+                                <div class="pw">
+                                    <input type="text" placeholder="pw를 입력하세요">
+                                </div>
+                            </div>
+
+                            <div class="right">
+                                <button style="width: 100%; height: 100%; padding: 0%;"> Login</button>
+                            </div>
+                        </div>
+
+                        <div class="foot">
+                            <a href="https://nid.naver.com/user2/help/pwInquiry.nhn?menu=pwinquiry" value="pW찾기"><input type="button"
+                                    value="PW찾기"></a>
+                                    <a href="https://nid.naver.com/user2/help/idInquiry.nhn?menu=idinquiry" value="ID찾기"><input type="button"
+                                            value="ID찾기"></a>
+                                 <a href="http://www.naver.com" value="로그인"><input type="button" value="회원가입"></a>
+                            
+                           
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="email">
+                    <div class="mboxh">
+                        Mail box
+                    </div>
+                    <div class="mboxc">
+                        <div>
+
+
+
+                            <div class="item">1번쨰 메일입니다.</div>
+                            <div class="item">2번쨰 메일입니다.</div>
+                            <div class="item">3번쨰 메일입니다.</div>
+                            <div class="item">4번쨰 메일입니다.</div>
+                            <div class="item">5번쨰 메일입니다.</div>
+                            <div class="item">6번쨰 메일입니다.</div>
+                            <div class="item">7번쨰 메일입니다.</div>
+                            <div class="item">8번쨰 메일입니다.</div>
+                            <div class="item">9번쨰 메일입니다.</div>
+                            <div class="item">10번쨰 메일입니다.</div>
+                            <div class="item">11번쨰 메일입니다.</div>
+                            <div class="item">12번쨰 메일입니다.</div>
+                            <div class="item">13번쨰 메일입니다.</div>
+                            <div class="item">14번쨰 메일입니다.</div>
+                            <div class="item">15번쨰 메일입니다.</div>
+                            <div class="item">16번쨰 메일입니다.</div>
+                            <div class="item">17번쨰 메일입니다.</div>
+                            <div class="item">18번쨰 메일입니다.</div>
+                            <div class="item">19번쨰 메일입니다.</div>
+                            <div class="item">20번쨰 메일입니다.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <Strong te>
+                copyright YKM
+            </Strong>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+
+</html>

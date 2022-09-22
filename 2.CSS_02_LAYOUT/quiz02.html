@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+   
+        /*2 박스사이징, 보더 만들기*/
+        *{
+            box-sizing: border-box;
+        }
+        div {
+            border: 1px solid black;
+        }
+
+        /*container 클래스의*/
+        .container {
+            width: 800px;
+            margin:auto;
+            overflow: hidden;
+        }
+      
+      
+        .header {
+            
+            height: 100px;
+        }
+
+        .contents {
+            height: 400px;
+        }
+
+        .footer {
+            height: 80px;
+        }
+
+
+
+          .header>div{
+            float:left;
+            height:100%;
+        }
+
+
+           .left{
+            /*
+            
+              .header>div{
+            float:left;
+            height:100%;
+        }   있으면 width값만 써도된다
+            
+            */
+            
+            width: 20%;
+             
+        }
+
+        .center{
+            float: left;
+            width: 70%;
+          height:100%;
+        }
+
+        .right{
+               float: left;
+            width: 10%;
+             
+        }
+
+
+        .navigator{
+            height: 30px;
+        }
+
+        .main{
+            float: left;
+            width: 80%;
+            height: 100%;
+        }
+
+        .my{
+            float: left;
+            
+            width: 20%;
+            height: 100%;
+        }
+
+        .login{
+            
+            height: 30%;
+        }
+
+        .email{
+         
+            height: 70%;
+        }
+   
+        /*네비게이터 안에 글씨 */     
+        
+        div>ul{
+            border: 1px solid red;
+            overflow: hidden;
+            padding:0px;
+            margin:0px;
+            height: 100%;
+        }
+    
+        ul>li{
+            float : left;
+            list-style-type:none;
+            margin: 0px;
+
+            /*25%는 li의 부모ul태그가 block으로 한라인을 독점을 하는데 그 라인을 기준*/
+            width: 25%;
+            height: 100%;
+            text-align: center;
+
+            line-height: 30px;
+            background-color: black;
+              color: white;
+        }
+    
+        ul>li:hover{
+            cursor:pointer;
+            background-color: gray;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!--1-->
+    <div class="container">
+
+        <div class="header">
+
+            <div class="left"> 1</div>
+            <div class="center"> 2 </div>
+            <div class="right">3</div>
+        
+        </div>
+
+        <div class="navigator">
+            <ul>
+               <li>Home</li>
+               <li>About Me</li>
+               <li>PortFolio</li>
+               <li>contact</li>
+
+            </ul>
+        </div>
+        
+        <div class="contents">
+
+        <div class="main">main </div>   
+
+        <div class="my">
+
+            <div class="login">
+                
+                
+
+                
+            </div>
+            <div class="email">
+                email
+            </div>
+
+          </div>
+
+        </div>
+        
+        <div class="footer">footer</div>
+    </div>
+
+
+</body>
+
+</html>

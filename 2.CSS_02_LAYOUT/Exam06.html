@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            border: 1px solid black;
+        }
+
+
+        /*margin auto 중앙이동*/
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
+
+
+     
+
+
+        .box1 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top:10px;
+            left:10px;
+            background-color: pink;
+            z-index: 5;
+         
+        }
+
+        .box2{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 5px;
+            top: 5px;
+
+            background-color: #42f5c250;
+            z-index: 6;
+        }
+        
+        .box3{
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            top: 100px;
+            left: 50px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <!--realtive : Normal flow 상에서 요소가 원래 존재해야하는 위치를 기준으로
+    상대적인 위치-->
+    <!--absolute : 자신과 가까운 parent중에서 Position속성이 static이 아닌 
+        parent를 기준으로, container 에 기본속성이static이니 처음엔 브라우저 기준으로 적용되니 container에 position: relative 부여
+-->
+
+    <div class="box3"></div>
+
+    <div class="container">
+            <div class="box1"></div>
+        <div class="box2"></div>
+    
+      
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <style>
+
+    /*div 태그 디폴트는 한라인 독점,한라인 다 독점하면 display:block
+    너비 높이 바뀌어도 한라인독점 성질 유지*/
+    /*높이는 건들이지 않는게 좋음*/
+/* div{
+
+    display: block;
+    border: 1px solid black;
+    width: 800px;
+  
+} */
+    /* 한라인 다 독점안하면 inline 너비건 높이건 자신의 내용만큼만 차지*/
+    /* button{
+        display: inline;
+    } */
+
+    /* button span은 기본 display inline , inline은 사이즈가안바뀜*/
+    /*inline-block으로  inline도 사이즈조절 대신 여백이 생김*/
+    /* span{
+        border: 1px solid black;
+        display: inline-block;
+        width: 50px;
+        height: 60px;
+    } */
+    /*div의 사용이 많아짐*/
+
+    /*div 태그의 보더 */
+    div{
+        border: 1px solid black;
+    }
+
+    /*container 클래스의*/
+    .contatiner{
+        width: 800px;
+    }
+    .header{
+        height: 100px;
+    }
+    .contents{
+        height: 400px;
+    }
+    .footer{
+        height: 80px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+    
+        <div class="container">
+                <div class="header">header</div>
+                <div class="contents">contents</div>
+                <div class="footer">footer</div>
+        </div>
+
+
+</body>
+</html>

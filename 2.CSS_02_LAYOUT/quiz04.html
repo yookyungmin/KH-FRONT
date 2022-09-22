@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        *{box-sizing: border-box;}
+        div{
+            border: 1px solid black;
+        }
+
+        .container{
+            width: 400px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .header{
+            
+            height: 30px;
+            text-align: center;
+            
+        }
+
+        .contents{ height:150px;}
+
+        .footer{
+            float: right;
+            height: 30px;}
+        .contents>div{
+            float: left;
+        }
+        .contents>.left{
+            width: 65%;
+            height: 100%;
+        }
+        .contents>.left>.login{
+            height: 50%;
+        }
+        .contents>.left>.pw{
+            height: 50%;
+        }
+        .contents>.left>.login>.a{
+            height: 100%;
+            width: 100%;
+        }
+
+        .contents>.left>.pw>.b{
+            height: 100%;
+            width: 100%;}
+
+     
+       .right{
+        float: left;
+        width: 35%;
+        height: 100%;
+       
+   
+      }
+     
+    .right>button{
+        height: auto;
+        width: 80px;
+        height: 80px;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+     input {
+        width:auto;
+        height:auto;
+        font-size:15px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+             <div class="header">
+                login box
+                </div>
+        <div class="contents">
+         
+            <div class="left">
+                <div class="login">
+                    <input class ="a" type="text" placeholder="ID를 입력하세요"  
+                 >
+                </div>
+                <div class="pw">
+                    <input class="b" type="text"placeholder="pw를 입력하세요">
+                </div>
+            </div>
+            <div class="right">
+                <button> Login</button>
+            </div>
+        </div>
+
+        <div class="footer">
+           <a href="http://www.naver.com" value="로그인"><input type="button" value="회원가입"></a>
+        <a href="https://nid.naver.com/user2/help/idInquiry.nhn?menu=idinquiry" value="ID찾기"><input type="button"
+                value="ID"></a>
+        <a href="https://nid.naver.com/user2/help/pwInquiry.nhn?menu=pwinquiry" value="IDW찾기"><input type="button" value="PW찾기"></a>
+        </div>
+      
+    </div>
+
+
+</body>
+</html>

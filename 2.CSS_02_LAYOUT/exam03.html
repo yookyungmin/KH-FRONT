@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    
+
+        /*
+            여백이 생길때 Parent에서의 padding과
+            child에서 margin 중 어떤것이 원인인지 구별 중요
+        */
+        
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 0px;
+            margin:0px;
+        }
+
+        /* */
+        ul, ul *{
+            border :1px solid black;
+         
+        }
+           ul{
+             overflow: hidden;
+             padding:0px; 
+             margin : 0px;
+             height: 40px;
+        }
+
+        ul>li{
+            float: left;
+            list-style-type: none;
+            margin: 0px;
+
+            /*25%는 li의 부모ul태그가 block으로 한라인을 독점을 하는데 그 라인을 기준*/
+            width: 25%; 
+            height: 100%;
+            text-align: center;
+
+            /*문자열이 딱한줄만 있을때  정렬하는기법*/
+            line-height: 35px;
+        }
+
+        ul>li:hover{
+            cursor:pointer;
+            /*마우스를 올렸을때 백그라운드의 컬러*/
+            background-color: gray;
+
+            /*마우스를 올렸을때 텍스트의 컬러*/
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul>
+    
+        <li>Home</li>
+        <li>About me</li>
+        <li>PortFolio</li>
+        <li>contact</li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div{
+            border: 1px solid black;
+           
+        }
+
+        .container{
+            overflow:hidden;
+        }
+
+        .box{
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!--normal flow  html 요소가 default로 놓이게 되는 영역, 책에 글을쓰듯 좌->우 상->하 로 놓이는 성질-->
+    <!--html 태그에 float 속성을 부여하면 태그는 Normal flow 영억을 벗어나 새로운 규칙이 적용되는 영역으로
+     빠져 나온다-->
+    <!--overflow 
+        Child태그를 가진 Parent 태그에서 child에 float 속성이 부여되면 parent태그는 자신의 child를 인식하지
+    못하는데 이떄 parent 에 overflow 속성을 부여하면  Normal Flow 및 floating area 모두를 계산하여 parent
+    자신의 사이즈를 계산하게 되고 이떄, Floationg 영역의 Child까지 인식하게 된다-->
+
+    <div class="container">
+
+    <div class="box"> </div>
+    
+   
+    <div class="box"> </div>
+    
+    </div>
+   
+    <div>
+        s
+    </div>
+    
+    <Div>sdasd</Div>
+</body>
+</html>
