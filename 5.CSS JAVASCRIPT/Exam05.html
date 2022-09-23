@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <!--함수(function)
+            c언어 c++ 자바스크립트에서 함수이름은 주소값-->
+
+            <script>
+                function plus(num1, num2){
+                        return num1+num2;
+                }
+
+                 let abc = plus; /*plus 함수의 주소를 abc에 담는다 plus 대신 abc 사용 가능*/
+                    console.log(abc(50, 25));
+
+                    let result = plus(10, 5);
+                    console.log(result);
+
+
+
+                // function minus1(num1, num2, num3){
+                //     return num1-num2+num3;
+                // }
+                //  console.log(minus1(5, 6, 8));
+
+
+
+                let minus = function(num1, num2){
+                    return num1-num2;
+                }; /*함수 이름이 없으면, 익명함수*/
+
+                let result2= minus(10,5)
+                console.log(result2);
+
+                function func(fn, num1, num2){  //함수의 인자값으로 함수를 넘겼다(함수이름은 주소값이기에 가능함), 자바에서는 존재하지 않는 문법
+                    return fn(num1, num2);
+                }
+
+                let result3 = func(plus, 10,5);
+                console.log(result3);
+
+                let result4= func(function(num1, num2){return num1*num2;}, 10,5);
+                console.log(result4);
+
+
+
+
+            </script>
+</body>
+</html>

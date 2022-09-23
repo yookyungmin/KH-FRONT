@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        div{
+            border: 1px solid black; height: 80px; width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    
+    <div id="div2"></div>
+    
+    <div id="div3"></div>
+    
+           
+    <script>
+            /*자바 스크립트에선 equals가 없다 문자열, 숫자를 모두 == 으로 비교한다 문자열과 숫자를 비교하면 숫자를 문자열로 자동변환해서 비교한다.*/
+            let msg = prompt("당신이 좋아하는 과일은 무엇입니까? \n 1.사과 2.딸기. 3 포도");
+
+               let a = document.getElementById("div2");
+            if(msg==1){
+                document.write('사과');
+             
+                a.innerHTML="사과";
+
+            }else if(msg=='2'){
+                document.write('딸기');
+                let a =document.getElementById("div2");
+                a.innerHTML="딸기";
+            
+            }else{
+                document.write("포도");
+                    let a = document.getElementById("div2");
+                a.innerHTML = "포도";
+            }
+    </script>
+
+
+
+    </body>
+</html>

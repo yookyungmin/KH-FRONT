@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <!-- Javascript event-->
+            <!--Browser 위에서 사용자가 취하는 모든 행동-->
+            <!-- Event Source : 이벤트가 발생하게 된 근원지, 이벤트가 일어나는 대상-->
+            <!--Event Listner : 이벤트 소스로부터 발생하는 이벤트를 종류별로 감시하는 감시자들, onclick-->
+            <!-- Event Handler : 특정 이벤트를 감지했을때 어떤 동작을 수행할지에 대해 조치사항을 가지는 함수-->
+
+
+            <button id="btn">
+                Pop!
+            </button> <!--Event source-->
+
+            <script>
+                    // function pop(){
+                    //     alert("hello");
+                    // }
+               //let popbtn = document.getElementById("btn")
+               // popbtn.onclick = pop; //event Listner   onclick 이 발생하면 pop 함수를 찾아가라
+            
+
+                  let popbtn = document.getElementById("btn")
+                popbtn.onclick = function(){
+                    alert("bye");
+                }; //익명함수 형태로 넣어주는게 많이씀
+
+                /*class back function 개발자에 의해 작성된 메서드 
+                개발자에 의해 call 되지 않고 사용자의 특정 Trigger에 의해 실행 되는 함수*/
+            
+                </script>
+</body>
+</html>

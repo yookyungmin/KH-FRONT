@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container{
+
+        }
+        div{
+            border: 1px solid black;
+            width: 300px;
+            height: 100px;
+        }
+        input{
+            width: 90%;
+            height: 90%;
+            text-align: center;
+            font-size: 30px;
+            }
+            button{
+                width: 100px;
+                height: 100px;
+                font-size: 30px;
+                margin-left: 30%;
+            }
+            #div4{
+                text-align: center;
+                font-size: 50px;
+            }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <dvi class="container">
+        <div id="div1"><input type="text" id="text1" placeholder="첫번째 수"></div>
+        <div id="div2"><input type="text" id="text2" placeholder="두번쨰 수"></div>
+            <div id="div3"> <button  id="plus">+</button></div>
+                <div id="div4"> </div>
+    </dvi>
+
+    <script>
+       
+            
+        
+
+            // let a = document.getElementById("text1").value;
+            // let b= document.getElementById("text2").value;
+
+              let btnplus = document.getElementById("plus");
+                btnplus.onclick=function(){
+                    // let a = document.getElementById("text1").value;
+                    // let b = document.getElementById("text2").value;
+                    //     let c= document.getElementById("div4");
+                    //    c.innerHTML=parseInt(a)+parseInt(b);
+
+              
+
+                
+                        let num1 = document.getElementById("text1");
+                        let num2 = document.getElementById("text2");
+
+                    document.getElementById("div4").innerHTML = parseInt(num1.value) + parseInt(num2.value);
+
+                        num1.value = "";  //값출력후 비우기
+                        num2.value = "";//값출력후 비우기
+
+                     }
+
+
+    </script>
+ 
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+   <Style>
+
+        div{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }    
+   </Style>
+
+
+</head>
+<body>
+    
+    <div id="div1" vlaue="DIVTEXT"></div>
+
+    
+
+     <input type="text" id="text1"><button id="btn">pop</button>
+
+     <script>
+        let popbtn = document.getElementById("btn");
+        popbtn.onclick= function(){
+            let a = document.getElementById("text1").value;
+            alert(a);
+     
+                let b = document.getElementById("div1");
+                b.innerHTML=a;
+          
+        };
+          
+        
+        
+
+     </script>
+</body>
+</html>

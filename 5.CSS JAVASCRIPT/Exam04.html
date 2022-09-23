@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <style>
+            div{
+                border: 1px solid black;
+            }
+
+            #div1{
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+
+
+</head>
+<body>
+
+           
+
+            <!--abc를 입력하면 value="abc"와 동일하게 적용된다-->
+            <!--clss 선택자로 하면 배열로 다뤄야 해서 id 선택자로 사용하는게좋다-->
+            <input type="text" id="text1"> <Br>
+            <input type="tex" id="text2">
+
+            <div id = "div1" value="DIVTEXT"></div>
+
+
+
+            <script>
+                let text1 = document.getElementById("text1"); /* <input type="text" id="text1"> 반환 되어서 text1에 담는다.*/
+                text1.value="def";
+                /*스크립트가 HTML을 통제할수 있다*/
+
+                let b = document.getElementById("text2");
+                    b.value="abc";
+        
+                let div1 = document.getElementById("div1");
+                div1.innerHTML="Hello JS"  /*div안에는 innerHTML사용*/
+
+                console.log(text1.value);  /*관리자모드 console에 출력*/
+                console.log(div1.innerHTML);
+        </script>
+            <!--Element는 태그들을 말한다.
+                ElementById 단수형
+                Elements ~ 복수형
+            -->
+</body>
+</html>
