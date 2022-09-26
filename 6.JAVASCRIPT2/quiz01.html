@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        legend{
+            height: 30px;
+        }
+        .FruitBox{
+            padding-top: 1px;
+        }
+    </style>
+</head>
+<body>
+    
+    <fieldset id="list">
+        <legend>fruits
+            </legend>
+            <div id="FruitBox"></div>
+   
+    </fieldset>
+
+    <div class="div1" >
+        <input type="text" id="text1" placeholder="앞에 추가할값"><button id = "FrontAdd">앞에서 추가</button><button id="FrontDel">앞에서 삭제</button>
+    </div>  
+    <div class = "div2">
+        <input type="text" id="text2" placeholder="뒤에 추가할값"><button id="BackAdd">뒤에서 추가</button><button id="BackDel">뒤에서 삭제</button>
+    </div>
+    
+
+    <script>
+
+        function refresh(){
+                FruitB.innerHTML = Fruits;
+        }
+        let Fruits = ["Americano", "Banana", "Grape", "Mango"];
+        let input1 = document.getElementById("text1");
+        let input2 = document.getElementById("text2");
+
+        let FA = document.getElementById("FrontAdd"); //앞추가
+        let FD = document.getElementById("FrontDel"); //앞삭제
+
+        let BA = document.getElementById("BackAdd"); //뒤추가
+        let BD = document.getElementById("BackDel");//뒤삭제
+
+
+
+        //초기값
+        let FruitB = document.getElementById("FruitBox");
+        FruitB.innerHTML=Fruits;
+
+        FA.onclick = function(){  //앞데이터 추가
+            let text1 = input1.value;
+    
+          Fruits.unshift(text1);       
+        //   FruitB.innerHTML=Fruits;
+
+
+          refresh();
+            input1.value = "";
+         
+        }
+        FD.onclick = function(){  //앞데이터 삭제
+            Fruits.shift()
+              refresh();
+  
+        }
+
+
+        BA.onclick = function(){  //뒤데이터 추가
+            let text2 = input2.value;
+            Fruits.push(text2);
+            FruitB.innerHTML=Fruits;
+             refresh();
+            input2.value = "";
+        }
+
+
+        BD.onclick = function(){ //뒤데이터 삭제
+            Fruits.pop();
+             refresh();
+       
+        }
+
+
+        //바인딩 기술
+        //console.log 에 넣더라도 innerHTML 을 사용한것처럼 UI에도 추가되는 기술도 생김
+        //refresh();
+
+    </script>
+</body>
+</html>

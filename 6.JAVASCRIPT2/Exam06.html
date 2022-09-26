@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <!--name-jack , contact 010 12344321-->
+
+    <script>
+        let person = {
+            "name":"jack",
+            "contact":"01012344321",
+            "hello":function(){  //hello key값에 함수 연결
+                console.log("Hello My Name is "+ this.name);
+            },
+            "hobby":["java", "Reading", "Piano"],
+        
+            "score":{
+                "kor":80,
+                "eng":100,
+                "math":50
+            },
+            "favoriteFruits":function(){
+                            return["Apple", "Strawberry", "BlueBerry"];
+                        },
+
+            "abilities":function(){
+                    return {  
+                    "java":function(){return 100;},
+                    "css":function(){return 90;},
+                    "js":function(){return 70;},
+                    }
+            },
+                "helloTo":function(friend){   //friend 객체를 받겠다
+                    console.log("hello"+friend.name);
+                },
+
+                "Dron": function(){  //대문자를 사용했기에 생성자
+                    this.brand = "Samsung";
+                    this.price=100000;
+                }
+
+            };
+
+            
+        
+
+        console.log(person.name);
+        console.log(person.contact);
+        person.hello();
+
+        console.log(person.hobby[2]);  //Piano출력
+
+        console.log(person.score.eng)   //영어 점수 출력
+        
+    
+
+        console.log(person.favoriteFruits()[1]);  //favoriteFruitrs 에서 두번쨰로 좋아하는과일
+
+            console.log(person.abilities().java()); //jack의 특지중 첫번쨰 특기점수
+        person.helloTo({"name":"susan"});
+
+        let dron = new person.Dron();
+            console.log(dron.brand);
+            console.log(dron.price);
+
+
+
+    </script>
+    
+</body>
+</html>

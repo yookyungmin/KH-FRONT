@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //push(마지막에 쌓는것) / pop(마지막부터 빼는것) & shift(앞에서부터 빼는것) / unshift(앞에서부터 값 추가)
+        let beverage = ["Americano"];
+        beverage.push("cafe latte");
+        beverage.push("Orange juice");
+        console.log(beverage);
+
+        let popData = beverage.pop();
+        console.log(popData);
+        console.log(beverage);
+
+        let shiftData = beverage.shift();
+        console.log(shiftData);
+
+        beverage.unshift("mango Juice")
+
+        console.log(beverage);
+</script>
+    
+</body>
+</html>

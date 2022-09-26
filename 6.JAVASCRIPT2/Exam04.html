@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        //slice : 배열 안에서 특정 요소들을 추출하여 반환하는 함수
+        //원본은 건드리지 않고 복사해서 가져온다
+        let lang =["C", "Java", "Perl", "Ruby", "Python"];
+
+
+       let sub =  lang.slice(2, 4);  // 2인덱스에서 3인덱스 추출
+
+       console.log(sub)
+
+       console.log(lang);
+       
+
+       //splice : 인자 조건에 따라 삭제 기능 또는 삽입 기능이 가능한 함수. 잇다, 이어서연결
+        //원본에 데이터 영향을 준다. 
+        //lang.splice(2, 1); //perl 삭제
+        // lang.splice(1, 2);  //java perl 삭제
+
+       lang.splice(1, 1, "Asam") //자바대신 Asam
+        //lang.splice(2,2, "Assm")
+
+        // lang.splice(2, 0, "Assm")//삭제하지않고 중간에 갑넣기
+        console.log(lang);
+        
+    </script>
+    
+</body>
+</html>

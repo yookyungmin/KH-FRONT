@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //javascript 에서 객체를 사용하는 방법 3가지
+        //1. 기본 객체(Object) 를 사용하는 방법
+
+        let student = new Object();
+        student.name = "Jack";
+        student.kor = 100;
+        student.eng = 50;
+        //student.1= "one"; //안됨
+        console.log(student);
+        //2. 객체 Liternal 을 사용하는 방법(중요, 새로만들때)
+        //자바스크립트에선 [] 배열 {} 객체
+        let person = {
+
+            "id" :1001,
+            "name":"Tom",
+            "contact" : "01012344321",
+            "1":"one" //객체Liternal에서만 허용
+        };  
+        console.log(person.id);
+        console.log(person.name);
+        console.log(person.contact);
+        console.log(person["1"]); //멤버필드 숫자일떄 사용가능
+        //1. JSON , JAVA SCRIPT OBJECT NOTAIION  - 자바스크립트에서 객체를 표기하는 문법
+        // 2. Cross Language Data Serialization
+        // 3. ex) 자바와 파이선이 데이터를 주고 받을떄 XML 사용 
+        //자바의 데이터 표시 방식을 XML로 변환하는걸 직렬화 과정이라고 한다, 변환 된 XML을 다시 해석하는걸 역직렬화라고 한다 중요
+        // xml -> JSON , 둘다사용해야 하는 경우가 많다 
+        //cross language
+    
+        //3 생성자를 사용하는 방법(쭝요, 자바 스크립트 라이브러리 만들어져 있는걸 가져다 쓸때)
+        //자바 스크립트의 함수는 다 생성자라고 볼수 있다.
+        // 함수 이름의 첫글자가 대문자면 생성자로 쓰일 예정이라 생각하면 된다
+        function CafeMenu(pid, pname, price){
+                this.pid = pid;
+                this.pname = pname;
+                this.price = price;
+                //this를 붙여야 멤버필드라는 뜻이된다
+                this.printInfo = function(){ // 객체 멤버 메서드 만드는방법
+                    console.log(this.pid+":"+this.pname+":"+price);
+
+                }
+
+        }
+
+        let menu = new CafeMenu(1001, "Americano", 2000);
+        console.log(menu.pid); // console.log(menu["pid"]);
+
+        console.log(menu.pname);
+        console.log(menu.price);
+        menu.printInfo();
+    </script>
+    
+</body>
+</html>

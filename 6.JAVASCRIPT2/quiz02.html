@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <fieldset>
+        <legend>목록</legend>
+        <div id = "FruitBox">
+
+        </div>
+</fieldset>
+
+    <div class="div1">
+        <input type="text" placeholder="추가할단어를 입력하세요" id="text1"><button id="Add">추가하기</button>
+    </div>
+        
+    <div class="div2">
+        <input type="text" placeholder="추가할단어를 입력하세요" id="text2"><button id="Delete">삭제하기</button>
+    </div>
+
+
+
+
+    <script>
+
+        // function refresh(){
+        //          FruitB.innerHTML = fruits;
+        // }
+        let fruits = ["Apple"];
+
+        let input1 = document.getElementById("text1");
+        let input2 = document.getElementById("text2"); 
+
+
+        let add = document.getElementById("Add");
+        let del = document.getElementById("Delete");
+        
+        //초기화
+        let FruitB  = document.getElementById("FruitBox");
+        FruitB.innerHTML = fruits;
+
+        add.onclick = function(){
+            let text1 = input1.value;
+            fruits.push(text1);
+            // refresh();
+            FruitB.innerHTML=fruits;
+            input1.value="";
+        }
+
+        del.onclick = function(){
+            let text2 = input2.value;
+            
+            let index = fruits.indexOf(text2); // 해당 입력값의 인덱스 반환
+
+            if(index!=-1){
+                fruits.splice(index, 1); //삭제 명령어
+                FruitB.innerHTML=fruits;
+                
+              
+
+            }else {
+                alert("존재하지 않습니다")
+            }
+
+            // fruits.splice(index, 1);
+            // // refresh();
+            // FruitB.innerHTML = fruits;
+            input2.value = "";
+
+        }
+    
+    </script>
+    
+</body>
+</html>
