@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <style>
+            div {
+                border: 1px solid black;
+                width: 300px;
+                height: 100px;
+            }
+        
+            button {
+                width: 100%;
+                height: 100%;
+                font-size: 30px;
+            }
+        </style>
+
+    <script>
+        //스크립트를 헤드 부분으로 올렸을때 window.onload 를 하면
+        // html 작업이 끝나고 실행이 된다
+        // HTML과 Script영역을 구분하여 가독성을 높이고자 할ㄸ Script를 상단 head 영역으로 뺴고 실행 순서를 
+        //조정하기 위해 많이 사용되는 이벤트
+            window.onload = function(){
+                let a = document.getElementById("text1");
+
+                        a.onmouseover = function () {
+                            // let c=document.getElementById("text1");
+                            // c.innerHTML="마우스 올렸음";
+
+                            document.getElementById("text1").innerHTML = "마우스 올렸음";
+                        }
+
+                        a.onmouseout = function () {
+                            let c = document.getElementById("text1");
+                            c.innerHTML = "마우스 내렸음";
+                        }
+
+                }
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+    
+
+    <Script>
+        //onclick  : 클릭 했을때 
+        //onmouseout 마우스가 소스 바깥으로 이탈 했을떄 
+        //onmousemove,마우스가 소스 위에서 움직였을떄
+        // onmouserover 마우스가 소스 위로 진입했을 때
+        // onkeyup  키보드 눌렀다가 손을떘을때
+        //onkeydown : 키보드를 눌렀을때
+        //onload: 페이지 로딩이 완료되었을 떄 html 작업이 끝났을떄
+        //onunload : 페이지를 종료 했을 떄 해당
+        //open 은 막힘 종료해도 반복적으로 켜지는 창
+        //script태그를 헤드에 올리는 이유 body에 내용이 많아질경우 스크립트를 분리해서 가독성을 높이기 위함,
+        // 근데 위로 올리면 에러가 나서 onload사용
+
+        // operBtn.onclick = function(){
+        //     result.innerHTML
+        // }
+    </Script>
+
+
+<div class="container">
+    <div id="div1">
+        <button id="text1">나는버튼</button>
+    </div>
+</div>
+</body>
+</html>
