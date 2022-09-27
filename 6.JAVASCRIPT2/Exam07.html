@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+</head>
+
+<!-- 주소 api사용법-->
+<body>
+    
+
+
+    <input type="text" id="postcode" placeholder="우편번호">
+    <input type="button" value="우편번호 찾기" id="btnSearch"><br>
+    <input type="text" id="address1" placeholder="주소">
+    <input type="text" id="address2" placeholder="상세주소">
+
+
+
+
+    <script>
+        document.getElementById("btnSearch").onclick = function(){
+                        new daum.Postcode({
+                oncomplete: function (data) { 
+                    // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                    document.getElementById('postcode').value = data.zonecode;
+                    document.getElementById("address1").value = data.jibunAddress; //roadAddress 도로명 주소
+
+
+                }
+            }).open();
+        }
+    </script>
+    <!--Postcode 생성자 안에 객체 리터럴을 전달받고 잇는데  key value 값으로들어간다 oncomplete = key 값  function = value 값-->
+
+    <!-- function (data) {} CALL BACK 함수 
+     다른 함수에 파라머터로 넘겨지는 함수-->
+</body>
+</html>
