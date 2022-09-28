@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //test : 정규표현식 형 변수에서 사용할수 있는 함수로
+        // 정규 표현식에 일치하는 데이터 검색 성공시 true 반환 실패시 false 반환
+
+        let str = "안녕하세요. 저는 Jack 입니다.";
+        let regex = /Jack/i; //regex 에 정규표현식 주소가 들어 있다.
+
+        let result = regex.test(str);
+
+        console.log(result);
+    </script>
+    
+</body>

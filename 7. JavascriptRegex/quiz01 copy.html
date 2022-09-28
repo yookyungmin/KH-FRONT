@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="phone" placeholder="핸드폰 번호를 입력하세요">
+    <button id = "check"> 검증 </button>
+    
+    <fieldset>
+        <legend>검증결과
+        </legend>
+        <div id="result"></div>
+    </fieldset>
+
+        
+   <script>
+    //정규표현식엔 포인터가 있다 포인터가 한글자씩 이동하면서 맞는걸 찾아낸다, 
+    // 글로벌 옵션을 주지않으면 찾는 순간 긑인데 글로벌 옵션은 포인터가 더 찾아내려고 한다.
+    
+    //전화번호 유효성 검사 
+         
+            let check1 = document.getElementById("check");
+            let result1 = document.getElementById("result");
+
+            
+      
+               
+     
+            check1.addEventListener("click",function(){
+
+             let phone = document.getElementById("phone").value;
+     
+                  let regex = /^01\d\d{3,4}\d{4}$/;
+                let regexresult = regex.test(phone);
+
+                if(regexresult){
+                        result1.innerHTML="핸드폰 번호가 맞습니다";
+                }else{
+                        result1.innerHTML="핸드폰 번호 형식이 아닙니다"
+                }
+            })
+            
+       
+    
+    </script>
+    
+</body>
+</html>
