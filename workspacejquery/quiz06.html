@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>  
+    <fieldset>
+        <legend>Input Controls</legend>
+        <input type="text" id= "title" placeholder="제목"><Br>
+        <input type="text" id ="contents" placeholder="내용"><br>
+        <input type="text" id = "writer" placeholder="작성자">
+        <button id = add>추가하기</button>
+    </fieldset>
+    
+    <table border="1">
+        <tr>
+            <th>제목</th>
+            <th>내용</th>
+            <th>작성자</th>
+            <th>삭제</th>
+        </tr>
+    
+    </table>
+
+        
+
+    <script>
+
+
+            //  $(".del").on("click", function () {
+            //         alert("TEST");
+            //     }) //삭제 버튼에 이벤트 부여 정적 요소(로딩 끝나기전에 생성된 요소)
+
+                  
+            
+            $(document).on("click",".del",function () {
+                        
+                       // $(this).parent().parent().remove();  // 제이쿼리로 형변환하고 조상의조상을 제거해야
+                        $(this).closest("tr").remove(); //버튼으로부터 가장 가까운 tr을 찾아서 지워라
+                        })
+                // 동적 바인딩 이슈, 동적요소= html 로딩 끝나고 나중에 추가된 요소에 이벤트 부여 방법 = 가장 가까운 정적 parent 지정해야함  document or table
+                // document
+                // 제이쿼리 document일때 ""사용?
+                //html 문서 안에는 정적 엘리먼트 요소가 있고, 로딩이 끝난 후 추가되는 동적요소가 있는데 정적 엘리먼트에 이벤트를 부여 하는방법과 동적요소에
+                //이벤트를 부여하는 방법은 다르다
+                //1번방법
+
+
+        $("#add").on("click", function(){
+             let title = $("#title").val();
+             let contents = $("#contents").val();
+            let writer = $("#writer").val();
+
+            
+        
+            // let complete = "<td>"+title+"</td> <td> "+contents+"</td> <td>"+writer+"</td> <td>"+"<button> X </button> </td>"
+            //         $("table").append("<tr>"+complete+"</tr>")
+
+
+
+            let tr = $("<tr>")
+                  let buttondel = $("<button>") 
+                    buttondel.html("X");
+                    buttondel.addClass("del"); //삭제버튼의 클래스이름을 del로지정  
+                    //동적요소 생성후 1번 방법 or 2번 방법 사용하여 이벤트부여
+                  buttondel.on("click", function () {
+                alert("test")
+              })  //동적요소 생성후 이벤트 직접 생성 2번방법
+               
+           
+            tr.append($("<td>").append(title)).append($("<td>").append(contents)).append($("<td>").append(writer)).append($("<td>").append(buttondel))
+                $("table").append(tr)
+
+
+                $("#title").val("")
+                $("#contents").val("")
+                $("#writer").val("")
+
+              
+
+            })
+    </script>
+
+    <!-- <script>
+        $("#add").on("click", function () {
+            let title = $("#title").val();
+            let contents = $("#contents").val();
+            let writer = $("#writer").val();
+
+            let tr = $("<tr>");
+
+            let tdTitle = $("<td>");
+            tdTitle.append(title);
+
+            let tdContents = $("<td>");
+            tdContents.append(contents);
+
+            let tdWriter = $("<td>");
+            tdWriter.append(writer);
+
+            tr.append(tdTitle);
+            tr.append(tdContents);
+            tr.append(tdWriter);
+
+            $("table").append(tr);
+
+            $("#title").val("");
+            $("#contents").val("");
+            $("#writer").val("");
+            $("#title").focus();
+
+        })
+    </script> -->
+
+</body>
+</html>

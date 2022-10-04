@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <style>
+        div{
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <!--동적 요소 제어-->
+    <!-- before/ prepend /append / after-->
+    <!--인피니트 스크롤링 ex 페이스북 -->
+
+    <div id="box">기존 데이터</div>
+    <script>
+
+        let prependBtn = $("<button>");  
+        prependBtn.html("Prepend");
+            //램속에만 Button 태그는 만들어진 상태 ui는 드러나지 않은 상태
+        //1. 직접스트링 값을 넣거나 2. 변수로 만들어서 넣기(장기적으로 좋음)
+
+        let prependDiv = $("<div>")
+            prependDiv.append(prependBtn)
+        $("#box").prepend(prependDiv)
+        // $("#box").prepend("<button>Prepend</button><Br>")
+       
+            let appendInput = $("<input>")
+            appendInput.attr('type', "text")
+            let appendDiv= $("<div>")
+                appendDiv.append(appendInput)
+                $("#box").append(appendDiv);
+            
+        //     $("#box").prepend("이곳이 prepend<Br>");  //기존보다 위쪽 추가
+        // $("#box").append("<br>이곳이 append") //기존보다 뒤쪽
+        // $("#box").append("<br><input type=text>")
+        $("#box").before("이곳이 before") //div보다 위쪽
+        $("#box").after("이곳이 after")  //div보다 뒤쪽
+    </script>
+
+</body>
+</html>

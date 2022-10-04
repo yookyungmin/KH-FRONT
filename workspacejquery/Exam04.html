@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <button class ="btn">Button1</button>
+    <button class="btn">Button2</button>
+    <button class="btn">Button3</button>
+    <button class="btn">Button4</button>
+    <button class="btn">Button5</button>
+    
+    <script>
+        //제이쿼리는 모든 선택자 처리를 배열로 처리
+        //for문 사용없이 한꺼번에 이벤트 적용 가능
+         $(".btn").on("click", function(){
+            alert($(this).html());  //자바스크립트 타입을 jquery로 형변환하여 html 사용
+            //TypeError: this.html is not a function 의 원인 this = 자바스크립트 오브젝트타입으로 .html() 사용불가 innerHtml
+            //jquery node
+         });
+
+         //console.log($("#temp").html()); //제이쿼리 노드
+         //console.log($(".btn")[0].innerHTML)  //배열로 꺼내면 자바스크립트 타입으로 innerHTML 사용
+         //consolel.log($($(".btn")[0]).html())  //배열로 꺼내면 자바스크립트 타입인데 Jquery로 형변환하여 html 사용
+
+
+
+        //자바스크립트식
+        // let btns = document.getElementsByClassName("btn");
+       
+        // btns.onclick = function(){
+        //     alert("test")
+        // } // 배열이기에 이벤트 리스너 존재x  작동불가
+        // for문으로 동작실행
+
+        // for(let i = 0; i<btns.length; i++){
+        // btns[i].onclick = function(){
+        //     alert(this.innerHTML)
+        // }
+        // }
+    </script>
+</body>
+</html>

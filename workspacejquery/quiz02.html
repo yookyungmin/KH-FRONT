@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+        <p>P1</p>
+        <P>P2</P>
+        <P>P3</P>
+        <P>P4</P>
+        <input type="text" id="msg1" placeholder="줄 번호 입력">
+        <input type="text" id="msg2" placeholder="색 입력">       
+        <button id="pop">적용</button>
+        
+        <script>
+
+            //줄번호 , 컬러 적용 시키기
+   
+            $("#pop").on("click",function(){
+            
+                 let msg1 = $("#msg1").val();
+                let msg2 = $("#msg2").val();
+
+                $("p:nth-child("+msg1+")").css("background-color",msg2)
+                $("#msg1").val(""); $("#msg2").val("");
+                $("#line").focus();
+                // $("p:nth-child(msg1)).css("background-color","msg2")
+                // $("p").css("background-color", "black")
+            })
+        </script>
+</body>
+</html>

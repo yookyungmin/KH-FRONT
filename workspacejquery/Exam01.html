@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <style>
+        div{
+            border: 1px solid black;
+        }
+
+        #box{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+           /* $ = jQuery.*/
+           /*$("#box") 는  document.getElementById("box"); 와 동일하다
+            하지만 두 데이터의 자료형은 다르다*/
+           /*.html = innerhtml*/
+            let box1 = $("#box")
+            let box2 = document.getElementById("box");
+            console.log(box1);  /*S.fn.init(1)0:  Jquery 타입*/  
+            console.log(box2);  /*<div id="box">Hello jquery</div> 자바스크립트 타입*/
+
+
+           $("#box").html("Hello jquery");  /*세터메서드와 비슷*/
+           let divText = $("#box").html(); /*게터메서드와 비슷*/
+           console.log(divText);
+
+           $("#box").css("background-color","pink").css("color","white");  
+           //jquery로 css 입히기, 체이닝기법 css 연결 가능
+
+            $("#box").css({
+            "background-color":"pink",
+            "color":"White"
+             })  
+             // Jquery를 사용하여 객체 타입으로 css입히기
+           
+    </script>
+</body>
+</html>

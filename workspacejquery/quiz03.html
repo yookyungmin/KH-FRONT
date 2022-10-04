@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+
+    <input type="text" id="msg1">
+    <input type="text" id="msg2">
+    <button id="pop" >+</button>
+    <div class="result" id="result"></div>
+    
+    <Script>
+
+        $("#pop").on("click",function(){
+            let msg1 = $("#msg1").val();
+            let msg2 = $("#msg2").val();
+            // let reuslt=$("#result").html();
+
+            $("#result").html(parseInt(msg1)+parseInt(msg2));
+
+            //  $("#msg1").val("");
+            //   $("#msg2").val("");  //공란
+            // result=parseInt(msg1)+parseInt(msg2);안됨
+
+
+        })
+        
+    </Script>
+</body>
+</html>
