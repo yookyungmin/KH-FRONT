@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(function(){
+
+            console.log($("#me").parent())
+            console.log($("#me").parent("#parent01"))//parent도 선택자 사용가능
+            console.log($("#me").parent("#grand_parent")) //자신의 직계 parent가 아니면 조상요소도 검색불가
+            console.log("-------------------------parent 실습")
+
+            console.log($("#me").closest()) //인자값 없으면 대상 검색 안됨
+            console.log($("#me").closest("#home"))
+            console.log($("#me").closest("#parent01"))
+            console.log($("#me").closest("#grand_parent")) 
+            console.log($("#me").closest("#parent02"))//자신의 parent부터 조상이 아니면 검색불가
+            console.log("----------------------------closest 실습")
+            //children():기준 요소의 직계 자손을 검색하여 반환
+            console.log($("#me").children()) //배열로 출력
+            console.log($("#me").children("#sister02")) //선택하면 요소만 출력
+            console.log($("#me").children()[1])//배열로 꺼내면 자바스크립트 형식으로 출력
+            console.log($("#me").children("#baby")) //children은 직계만 가능
+            console.log("------------------children 실습")
+            //find():기준 요소의 후손 전체에서 대상을 검색 가능
+            console.log($("#me").find()); //인자값 없으면 검색 불가
+            console.log($("#me").find("#baby02"));
+            console.log("----------------find 실습")
+            //siblings() :기준 요소와 동수준 요소를 검색 반환
+            console.log($("#me").siblings())
+            console.log($("#me").prev()) //앞쪽에 있는 요소
+            console.log($("#me").next())//뒤쪽에 있는요소
+             console.log($("#me").siblings("#brothe02"))
+            
+             //quiz01 brother02를 기준으로 baby02를 검색하여 background-color 에 pink를 설정
+            $("#brother02").prev().find('#baby02').css("background-color", "pink");
+             //quiz02 baby를 기준으로 parent02를 검색하여 color를 green으로
+                // $("#baby").closest("#parent01").next().css("color", "green")
+            $("#baby").closest("#parent01").siblings("#parent02").css("color", "red")
+            })
+    </script>
+</head>
+<body>
+    <!--HTML 요소 검색-->
+    <!--Parent(): 기준 요소의 직계 parent 요소를 찾아 반환-->
+    <!--Parnet()함수에 선택자를 지정할순 있으나 자신의 parent가 아닌 요소 검색불가-->
+    <!--closest(): 기준 요소의 parent 부터 모든 조상 중 선택자 조건에 맞는 요소를 찾아 반환-->
+    <!--         ex) closest("#p_parent")-->
+    <div id="home">
+        Home
+        <div id="grand_parent">
+            GrandParent
+            <div id="parent01">
+                Parent01
+                <div id="brother01">
+                    Brother01
+                </div>
+                <div id="me">
+                    Me
+                    <div id="sister01">
+                        Sister01
+                        <div id="baby">
+                            Baby01
+                        </div>
+                    </div>
+                    <div id="sister02">
+                        Sister02
+                        <div id="baby02">
+                            Baby02
+                        </div>
+                    </div>
+                </div>
+                <div id="brother02">
+                    Brother02
+                </div>
+            </div>
+            <div id="parent02">
+                Parent02
+            </div>
+        </div>
+    </div>
+</body>
+</html>

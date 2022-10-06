@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+        <style>
+            div{
+                /* border: 1px solid black; */
+            }
+            .container{
+                width: 500px;
+                height: 100%;
+            }
+            .head{
+               font-size: 40px;
+            }
+            .head>button{
+                font-size: 50px;
+            }
+
+            #result{
+                height: 400px;
+            }
+
+            /* .del{
+
+                text-decoration: underline;
+                font-size: 30px;
+            } */
+
+            .divtotal>input{
+              font-size: 30px;
+              width: 80%;
+            }
+
+        
+        </style>
+
+        <!-- <script>
+            // window.onload 와 동일
+            //로딩이 끝난 후 함수가 실행되어 헤드 영역에 스크립트 사용 가능
+            $(function () {
+                $("#add").on("click", function () {
+                    if ($("input[type=file]").length > 4) {
+                        alert("파일 첨부는 최대 5개 까지만 가능합니다.")
+                        return;
+                    }
+
+                    let fileDiv = $("<div>");
+
+                    let inputFile = $("<input>");
+                    inputFile.attr("type", "file");
+
+                    let xAnker = $("<a>");
+                    xAnker.attr("href", "#");
+                    xAnker.html("x");
+
+                    fileDiv.append(inputFile);
+                    fileDiv.append(xAnker);
+
+                    $("#fileBox").append(fileDiv);
+                })
+                $("#fileBox").on("click", "a", function () {
+                    $(this).closest("div").remove();
+                })
+            })
+        </script> -->
+    </head>
+
+<body>
+        <div class = "container">
+            <div class="head">
+            파일첨부<button id="add">+</button>
+        </div>
+
+        <div    id="result">
+
+        </div>
+    </div>
+
+        <script>
+
+      
+            $(document).on("click",".del", function(){
+
+                $(this).parent().remove();
+            })
+
+
+            $("#add").on("click", function(){
+       
+                if ($("input[type=file]").length > 4) {
+                    alert("파일 첨부는 최대 5개까지만 가능합니다")
+                    return;
+                }
+
+                
+                let delbtn = $("<a>").css("text-decoration", "none").css("font-size","30px")
+                delbtn.html("X")
+                delbtn.attr("href","#")
+                delbtn.addClass("del")
+                
+                let title = $("<input>")
+                    title.attr("type", "file")
+                
+                let divtotal =$("<div>")
+                    divtotal.addClass("divtotal")
+                    
+                    
+                    divtotal.append(title)
+                    divtotal.append(delbtn)
+                
+                    $("#result").append(divtotal)
+
+         
+             
+  
+
+
+            })
+        </script>
+        
+
+    
+</body>
+</html>

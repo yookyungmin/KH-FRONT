@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <style>
+        div{border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="input" contenteditable="true">abc</div>
+    <script>
+        $("#input").on("keydown", function(e){
+
+            if(e.keyCode==13 && e.shiftKey==false){//사용자 입력이 enter
+                return false; //기본동작중지
+
+                //prventdefault //기본동작중지
+
+            }
+        })
+    </script>
+</body>
+</html>

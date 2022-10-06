@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: dodgerblue;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+        <div id="box"></div>
+
+        <button id="show">show</button>
+        <button id="hide">hide</button>
+
+        
+        <script>
+            //콜백함수: 어떤 이벤트가 발생했거나 특정 시점에 도달했을 때 시스템에서 호출하는 함수를 말한다.
+
+             $("#show").on("click", function () {
+                $("#box").show(1000,function(){
+                    alert("show가 완료 됐을때 실행 될 함수")
+                }); //
+                })
+            $("#hide").on("click", function(){
+                $("#box").hide(1000, function(){
+                    alert("hide가 완료 됐을때 실행 될 함수")
+                });
+            })
+
+                // $("#show").on("click", function () {
+                //         $("#box").slideDown(1000, function () {
+                //             alert("show가 완료 됐을때 실행 될 함수")
+                //         }); //
+                //     })
+                //     $("#hide").on("click", function () {
+                //         $("#box").slideUp(1000, function () {
+                //             alert("hide가 완료 됐을때 실행 될 함수")
+                //         });
+                //     })
+                
+                //fadeIn, fadeout 천찬히 사라지거나 나타나기
+        </script>
+</body>
+</html>
